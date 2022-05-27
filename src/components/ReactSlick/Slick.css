@@ -1,0 +1,113 @@
+.slick-prev:before,
+.slick-next:before {
+    color: gray !important;
+    font-size: 2rem !important;
+}
+
+.slick-slider.center.slick-initialized {
+    max-width: 1024px !important;
+    margin: auto;
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .slick-slider.center.slick-initialized {
+        max-width: 500px !important;
+        margin: auto;
+    }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+    .slick-slider.center.slick-initialized {
+        max-width: 700px !important;
+        margin: auto;
+    }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+    .slick-slider.center.slick-initialized {
+        max-width: 900px !important;
+        margin: auto;
+    }
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+    .slick-slider.center.slick-initialized {
+        max-width: 1024px !important;
+        margin: auto;
+    }
+}
+
+/* .slick-next {
+    right: -60px !important;
+} */
+
+.slick-prev {
+    left: -35px !important;
+}
+
+
+
+.slick__title {
+    background-image: url(https://www.cgv.vn/skin/frontend/cgv/default/images/bg-cgv/h3_movie_selection.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 30px;
+}
+
+.slick__wrap {
+    @apply max-w-xs m-1 rounded relative;
+}
+
+.slick__wrap:hover .slick__overlay {
+    opacity: 1;
+}
+
+.slick__img {
+    @apply object-cover object-center w-full shadow-md rounded h-96;
+    /* max-width: 250px; */
+}
+
+
+.slick__overlay {
+    @apply flex flex-col;
+    background-color: rgba(255, 255, 255, 0.2);
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: all 0.1s ease;
+}
+
+.slick-trailer {
+    flex: 1;
+    display: flex;
+    cursor: pointer;
+    user-select: none;
+}
+
+.slick-trailer__overlay {
+    position: absolute;
+    width: 100vh;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.slick__desc {
+    @apply rounded-b;
+    height: 80px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.slick__tenPhim {
+    @apply text-white text-center text-xl uppercase;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding: 0 8px;
+}

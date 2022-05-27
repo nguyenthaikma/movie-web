@@ -1,0 +1,9 @@
+.tab__diaChi {
+    @apply font-normal text-ellipsis ml-1;
+    white-space: pre-wrap;
+    max-width: 200px;
+}
+
+.tab__label {
+    min-width: 43px;
+}

@@ -1,0 +1,88 @@
+.checkout--active {
+    @apply text-red-600 border-red-600 hover:text-red-600;
+    border-top-width: 2px;
+    box-sizing: border-box;
+}
+
+.checkout__background {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.checkout__content {
+    width: 90%;
+    height: 100%;
+    background-color: #fff;
+    float: right;
+}
+
+/* .checkout-inf__movie {
+    box-shadow:  -8px 7px 10px -4px rgb(0 0 0 / 0.1), -8px 2px 6px -4px rgb(0 0 0 / 0.1);
+} */
+
+.checkout-inf__item {
+    padding: 6px 0;
+    border-top: 1px solid rgb(245, 233, 233);
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.checkout-inf__item p {
+    margin: 0;
+}
+
+.checkout-inf__label {
+    color: rgb(129, 127, 127);
+    font-size: 11px;
+}
+
+.checkout-inf__input {
+    outline: none;
+}
+
+.font-11 {
+    font-size: 11px;
+}
+
+.checkout-booking {
+    @apply col-span-3  fixed z-10 bg-white;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 306px;
+    /* height: fit-content; */
+}
+
+.checkout-booking__btn {
+    @apply bg-red-500 text-white w-full py-2 text-xl font-semibold;
+}
+
+.checkout-booking__btn.disabled {
+    @apply bg-gray-400 text-white w-full py-2 text-xl font-semibold;
+}
+
+.ghe {
+    @apply bg-gray-400 text-white w-9 h-9 rounded-full font-semibold;
+    margin: 5px;
+}
+
+.gheVip {
+    @apply bg-yellow-500;
+}
+
+.gheDaDat {
+    @apply bg-red-600;
+    cursor: not-allowed;
+}
+
+.gheDangChon {
+    @apply bg-green-500;
+}
+
+.gheBanDat {
+    @apply bg-white text-green-500;
+    box-shadow: 0px 0px 2px 1px #22c55e;
+}

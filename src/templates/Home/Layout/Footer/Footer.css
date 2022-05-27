@@ -1,0 +1,4 @@
+.footer {
+    @apply py-6 text-white bg-neutral-800;
+    
+}

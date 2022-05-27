@@ -1,0 +1,16 @@
+.slick-dots-bottom {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.slick-dots li button:before {
+    display: none;
+}
+
+.home__carousel {
+    height: calc(100vh - 96px);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}

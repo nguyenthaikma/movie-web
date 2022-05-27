@@ -1,0 +1,22 @@
+.header {
+    @apply p-4;
+    background-color: rgb(0, 0, 0);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header__navLink {
+    @apply text-white hover:text-red-500 flex items-center px-4 -mb-1;
+}
+
+.header__navLink.active {
+    @apply text-red-500 border-b border-red-500;
+}
+
+.header__btn {
+    @apply self-center text-white hover:text-white text-base font-normal rounded bg-red-500;
+    padding: 7px 17px;
+}
