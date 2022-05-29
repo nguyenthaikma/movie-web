@@ -7,6 +7,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import Swal from 'sweetalert2'
 import { ACCOUNT } from '../../util/settings/config';
 import { capNhat, layThongTin } from '../../redux/actions/QuanLyNguoiDungAction';
+import { t } from 'i18next';
+import { useTranslation } from 'react-i18next';
 
 
 export default function News() {
@@ -19,7 +21,7 @@ export default function News() {
     const status = useSelector(state => state.QuanLyNguoiDungReducer.status);
 
     // console.log(status)
-
+    const { t, i18n } = useTranslation();
 
     const onFinish = (values) => {
         const objDispatch = {
@@ -51,7 +53,7 @@ export default function News() {
             <section className="text-gray-600 body-font">
                 <div className="container px-5 py-24 mx-auto flex flex-col">
                     <div className="lg:w-4/6 mx-auto">
-                        <h3 className="info__info">Thông tin cá nhân</h3>
+                        <h3 className="info__info">{t('personal')}</h3>
                         <div className="flex flex-col sm:flex-row mt-14">
                             <div className="sm:w-1/3 text-center sm:pr-8 sm:py-8">
                                 <div className="flex justify-center items-center">
@@ -60,7 +62,7 @@ export default function News() {
                                 <div className="flex flex-col items-center text-center justify-center">
                                     <h2 className="font-medium title-font mt-4 text-gray-900 text-lg">{thongTinNguoiDung?.hoTen}</h2>
                                     <div className="w-12 h-1 bg-indigo-500 rounded mt-2 mb-4" />
-                                    <NavLink to="/history" className="mt-3 flex justify-center items-center">Lịch sử đặt vé<ArrowRightOutlined className="ml-1" /></NavLink>
+                                    <NavLink to="/history" className="mt-3 flex justify-center items-center">{t('history')}<ArrowRightOutlined className="ml-1" /></NavLink>
                                 </div>
                             </div>
                             <div className="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
@@ -121,7 +123,7 @@ export default function News() {
                                     </div>
                                     <div className="my-4">
                                         <span className="font-semibold">Loại người dùng: </span>
-                                        <span className="italic">{thongTinNguoiDung?.loaiNguoiDung}</span>
+                                        <span className="italic">{thongTinNguoiDung?.loaiNguoiDung || thongTinNguoiDung?.maLoaiNguoiDung}</span>
                                     </div>
                                     <div className="my-4">
                                         <span className="font-semibold">Số điện thoại: </span>
@@ -147,13 +149,13 @@ export default function News() {
                                         }
                                     </div>
                                     {status ?
-                                        <Button htmlType="submit" type="primary">Cập nhật</Button>
+                                        <Button htmlType="submit" type="primary">{t('capnhat')}</Button>
                                         :
                                         <span onClick={() => {
                                             dispatch({
                                                 type: 'CHANGE'
                                             })
-                                        }} style={{ color: '#1890ff' }} className="underline cursor-pointer">Chỉnh sửa</span>
+                                        }} style={{ color: '#1890ff' }} className="underline cursor-pointer">{t('chinhsua')}</span>
                                     }
                                 </Form>
                             </div>

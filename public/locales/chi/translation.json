@@ -12,5 +12,9 @@
     "choose": "选座并付款",
     "results": "订票结果",
     "book": "订票",
-    "apply": "申请"
+    "apply": "申请",
+    "chuadatve": "您还没有订票，请订票继续",
+    "chinhsua": "编辑",
+    "capnhat": "更新",
+    "dangxuat": "登出"
 }

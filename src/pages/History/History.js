@@ -6,11 +6,14 @@ import { useNavigate } from 'react-router-dom';
 import { ThongTinTaiKhoan } from '../../redux/actions/QuanLyDatVeAction';
 import { ACCOUNT } from '../../util/settings/config';
 import Swal from 'sweetalert2';
+import { useTranslation } from 'react-i18next';
 
 export default function Contact() {
 
     const dispatch = useDispatch();
     const navigate = useNavigate();
+
+    const { t, i18n } = useTranslation();
 
     const thongTinNguoiDung = JSON.parse(localStorage.getItem(ACCOUNT));
 
@@ -33,6 +36,11 @@ export default function Contact() {
 
     const renderFirm = () => {
         if (thongTinDatVe) {
+            if (thongTinDatVe.length === 0) {
+                return <div className="w-full mb-40">
+                    <h1 className="text-gray-400 italic text-center">{t('chuadatve')}</h1>
+                </div>
+            }
             return thongTinDatVe?.map((phim, index) => {
                 const thongTinRap = phim.danhSachGhe[0];
                 return <div className="p-4 md:w-1/3" key={index}>
@@ -62,17 +70,13 @@ export default function Contact() {
                     </div>
                 </div>
             })
-        } else {
-            return <div className="w-full">
-                <h1 className="text-gray-400 italic text-center">Bạn chưa đặt vé, vui lòng đặt vé để tiếp tục!!</h1>
-            </div>
         }
     }
 
 
     return (
         <div className="container mx-auto mt-40 mb-20">
-            <h3 className="text-center text-3xl font-semibold mb-12">Lịch sử đặt vé</h3>
+            <h3 className="text-center text-3xl font-semibold mb-12">{t('history')}</h3>
             <div className="flex flex-wrap -m-4">
                 {renderFirm()}
             </div>

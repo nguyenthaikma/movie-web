@@ -12,5 +12,9 @@
     "choose": "CHOOSE SEAT & PAY",
     "results": "BOOKING RESULTS",
     "book": "BOOKING",
-    "apply": "Apply"
+    "apply": "Apply",
+    "chuadatve": "You have not booked tickets, please book tickets to continue!!",
+    "chinhsua": "Edit",
+    "capnhat": "Update",
+    "dangxuat": "Log out"
 }

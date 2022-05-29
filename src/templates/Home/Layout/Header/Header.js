@@ -24,7 +24,7 @@ export default function Header() {
 
     const content = (
         <div>
-            <NavLink to="/info">Thông tin cá nhân</NavLink>
+            <NavLink to="/info">{t('personal')}</NavLink>
             <div>
                 <Button className="mt-2" danger type="primary" onClick={() => {
                     localStorage.removeItem(ACCOUNT);
@@ -36,7 +36,7 @@ export default function Header() {
                         dispatch({ type: 'HIDE_LOADING' })
                     }, 400)
                     navigate('/login');
-                }}>Đăng xuất</Button>
+                }}>{t('dangxuat')}</Button>
             </div>
         </div>
     )

@@ -55,7 +55,7 @@ export const dangKy = (data, navigate) => {
                 navigate('/login');
             }
         } catch (err) {
-            console.log(err)
+            error(err.response.data);
             console.log(err.response);
         }
 
@@ -96,8 +96,9 @@ export const capNhat = (data) => {
                 success('Cập nhật thành công!!');
             }
         } catch (err) {
-            console.log(err)
-            console.log(err.response);
+            // console.log(err.data)
+            error(err.response.data);
+            console.log(err.response.data);
         }
 
     }
